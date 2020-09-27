@@ -35,7 +35,7 @@ from not_available import not_available
 # pages = list(range(1, page_input))
 city_name = (input("What is the city you want to look at the air quality for? (Format: City, State): ") or "San Jose, CA")
 url = ("https://www.airnow.gov")
-#url = "https://www.zillow.com/homedetails/1201-Burnham-Dr-San-Jose-CA-95132/19773843_zpid/"
+
 # Open the browser and URL
 driver = webdriver.Firefox()
 driver.get(url)
@@ -112,11 +112,6 @@ elif aqi >= 100 and aqi <= 150:
 else:
     status = "Unhealthy"
     message = "Turn on your air purifier and stay indoors, wear masks if needed"
-
-if city_name == "San Jose, CA":
-    pic = 'https://i.ibb.co/nCGNfsN/SJ-AQI.png'
-else:
-    pic = 'https://i.ibb.co/wsn6s2F/LA-AQI.png'
 
 
 print("The air quality status is: " + status)
